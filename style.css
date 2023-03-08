@@ -93,6 +93,34 @@ a {
   display: none;
 }
 
+/* Animations */
+
+.blink {
+  animation: blink 2s infinite;
+}
+@keyframes blink {
+  0% {
+    background: #1b1b1b;
+    color: white;
+    font-weight: 400;
+  }
+  25% {
+    background: #e40e7f;
+    color: #1b1b1b;
+    font-weight: 700;
+  }
+  50% {
+    background: #1b1b1b;
+    color: white;
+    font-weight: 400;
+  }
+  75% {
+    background: #e40e7f;
+    color: #1b1b1b;
+    font-weight: 700;
+  }
+}
+
 /* ============================
 SupraNav
 =============================== */
@@ -131,6 +159,8 @@ Main Nav
 
 .main-nav-wrap {
   width: 100%;
+  position: relative;
+  z-index: 1000;
 }
 .main-nav {
   justify-content: center;
@@ -141,8 +171,10 @@ Main Nav
   width: 255px;
 }
 .main-nav-link {
-  padding: 15px 0;
   font-size: 20px;
+}
+.main-nav-link a {
+  padding: 10px 0;
 }
 
 /* ============================
@@ -150,23 +182,25 @@ Dropdown Nav
 =============================== */
 .dropdown-menu {
   position: absolute;
-  top: 275px;
+  top: 150px;
   opacity: 0;
   visibility: hidden;
-  z-index: 1000;
   transition: opacity 0.3s ease-out, top 0.3s ease-out;
   width: 255px;
   background-color: #1b1b1b;
 }
+.main-nav-link:hover {
+  animation: blink 2s infinite;
+}
 .main-nav-link:hover > .dropdown-menu {
   visibility: visible;
   opacity: 1;
-  top: 222px;
+  top: 45px;
 }
 .dropdown-link-wrap {
   width: 100% !important;
   border-bottom: 1px solid #e40e80;
-  font-size: 16px;
+  font-size: 15px;
 }
 .dropdown-link {
   padding: 10px 0;
