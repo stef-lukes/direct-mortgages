@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* ============================
+Global Styles
+=============================== */
+
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Fonts */
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.txt-900 {
+  font-weight: 900;
+}
+.txt-center {
+  text-align: center;
+}
+
+/* Lists */
+
+ul,
+li {
+  list-style: none;
+}
+
+/* Colours */
+
+.txt-white {
+  color: white;
+}
+.txt-dark {
+  color: #1b1b1b;
+}
+.txt-fuschia {
+  color: #e40e7f;
+}
+.bg-dark {
+  background-color: #1b1b1b;
+}
+.bg-white {
+  background-color: white;
+}
+.bg-fuschia {
+  background-color: #e40e7f;
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.border-left {
+  border-left: 1px solid white;
+}
+.border-right {
+  border-right: 1px solid white;
+}
+.hover-transition {
+  transition: all 0.2s ease-in-out;
+}
+.hover-pink:hover {
+  background-color: #e40e7f;
+  color: #1b1b1b;
+  font-weight: 700 !important;
+}
+
+/* Display */
+
+.flex {
+  display: flex;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+.block {
+  display: block;
+}
+.rounded {
+  border-radius: 20px;
+}
+.no-display {
+  display: none;
+}
+
+/* ============================
+SupraNav
+=============================== */
+.supra-nav {
+  align-items: center;
+  margin: 15px;
+}
+.main-logo {
+  width: min(35vw, 530px);
+  padding-left: 30px;
+}
+
+.contact-info {
+  padding: 25px;
+  justify-content: space-between;
+  width: min(50%, 785px);
+}
+.tagline h3 {
+  font-size: clamp(40px, 3.8vw, 62px);
+  line-height: 0.92;
+}
+.tagline h4 {
+  font-size: clamp(20px, 1.7vw, 27px);
+}
+.number {
+  font-size: clamp(26px, 3.55vw, 56px);
+  line-height: 0.96;
+}
+.mail-link {
+  font-size: clamp(20px, 1.8vw, 28px);
+}
+
+/* ============================
+Main Nav
+=============================== */
+
+.main-nav-wrap {
+  width: 100%;
+}
+.main-nav {
+  justify-content: center;
+  width: min(100%, 1700px);
+  margin: auto;
+}
+.main-nav li {
+  width: 255px;
+}
+.main-nav-link {
+  padding: 15px 0;
+  font-size: 20px;
+}
+
+/* ============================
+Dropdown Nav
+=============================== */
+.dropdown-menu {
+  position: absolute;
+  top: 275px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  transition: opacity 0.3s ease-out, top 0.3s ease-out;
+  width: 255px;
+  background-color: #1b1b1b;
+}
+.main-nav-link:hover > .dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+  top: 222px;
+}
+.dropdown-link-wrap {
+  width: 100% !important;
+  border-bottom: 1px solid #e40e80;
+  font-size: 16px;
+}
+.dropdown-link {
+  padding: 10px 0;
+  color: white;
+  font-weight: initial !important;
+  transition: all 0.4s ease-in-out;
+}
+
+/* ============================
+Header
+=============================== */
+
+/* Subnav Msg */
+#sub-nav-msg {
+  padding: 10px 0;
+}
+#sub-nav-msg h1 {
+  font-size: 36px;
+  letter-spacing: 2px;
+}
+/* Subnav List */
+#sub-nav-list {
+  padding: 10px 0;
+  border-bottom: 5px solid #1b1b1b;
+  border-top: 5px solid #1b1b1b;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#sub-nav-list li p {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.pink-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: #e40e7f;
+}
+/* Hero Image */
+#hero-wrap {
+  width: 100%;
+  height: 34vw;
+  background-image: url(assets/header-bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+#hero-wrap img {
+  display: block;
+  margin: auto;
+  position: relative;
+  top: 18%;
+  width: 30%;
+}
