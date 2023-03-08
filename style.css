@@ -214,8 +214,11 @@ Header
 =============================== */
 
 /* Subnav Msg */
-#sub-nav-msg {
+#pink-banner-top,
+#pink-banner-bottom {
   padding: 10px 0;
+  border-top: 5px solid #1b1b1b;
+  border-bottom: 5px solid #1b1b1b;
 }
 #sub-nav-msg h1 {
   font-size: 36px;
@@ -225,7 +228,6 @@ Header
 #sub-nav-list {
   padding: 10px 0;
   border-bottom: 5px solid #1b1b1b;
-  border-top: 5px solid #1b1b1b;
   justify-content: space-evenly;
   align-items: center;
 }
