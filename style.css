@@ -186,7 +186,7 @@ Dropdown Nav
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease-out, top 0.3s ease-out;
-  width: 255px;
+  width: min(255px, 20%);
   background-color: #1b1b1b;
 }
 .main-nav-link:hover {
@@ -260,8 +260,79 @@ Header
 }
 
 /* ============================
-Media Queries
+Panel Styles Global
 =============================== */
+.panel {
+  padding: 50px 75px;
+}
+.panel-heading.flex {
+  align-items: center;
+  width: min(100%,1540px);
+  margin: auto;
+  justify-content: space-between;
+}
+.title {
+  /* margin-right: 90px; */
+  width: min(455px,37%);
+}
+.h-underline {
+  height: 5px;
+  background: #e40e7f;
+}
+.subheading {
+  font-size: min(1.7vw,26px);
+  width: 57%;
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+.p-underline {
+  /* height: 5px; */
+  background: #e40e7f;
+  width: 91%;
+  margin: 6px auto 40px auto;
+}
+.link-list-wrap {
+  width: min(100%,1540px);
+  justify-content: space-between;
+  /* align-items: center; */
+  margin: auto;
+}
+.link-list {
+  width: 30%;
+}
+.link-list li {
+  align-items: center;
+  margin: 10px 0;
+}
+img.check {
+  width: min(2vw,30px) !important;
+  margin-right: 15px;
+  display: block !important;
+}
+.link-list a {
+  font-size: min(1.5vw,25px);
+}
+
+/* ============================
+Bad Credit
+=============================== */
+#bad-credit h2 {
+  font-size: min(80px, 5.7vw);
+}
+#bad-credit h3 {
+  margin-top: 5px;
+  font-size: min(3vw, 42px);
+  letter-spacing: 2px;
+}
+
+.link-list-wrap img {
+  width: 15%;
+  display: none;
+}
+
+/* ============================================================
+Media Queries
+============================================================= */
 
 /* Nav */
 @media (max-width: 1280px) {
