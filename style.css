@@ -267,20 +267,20 @@ Panel Styles Global
 }
 .panel-heading.flex {
   align-items: center;
-  width: min(100%,1540px);
+  width: min(100%, 1540px);
   margin: auto;
   justify-content: space-between;
 }
 .title {
   /* margin-right: 90px; */
-  width: min(455px,37%);
+  width: min(455px, 37%);
 }
 .h-underline {
   height: 5px;
   background: #e40e7f;
 }
 .subheading {
-  font-size: min(1.7vw,26px);
+  font-size: min(1.7vw, 26px);
   width: 57%;
   line-height: 1.7;
   letter-spacing: 1px;
@@ -292,7 +292,7 @@ Panel Styles Global
   margin: 6px auto 40px auto;
 }
 .link-list-wrap {
-  width: min(100%,1540px);
+  width: min(100%, 1540px);
   justify-content: space-between;
   /* align-items: center; */
   margin: auto;
@@ -305,12 +305,12 @@ Panel Styles Global
   margin: 10px 0;
 }
 img.check {
-  width: min(2vw,30px) !important;
+  width: min(2vw, 30px) !important;
   margin-right: 15px;
   display: block !important;
 }
 .link-list a {
-  font-size: min(1.5vw,25px);
+  font-size: min(1.5vw, 25px);
 }
 
 /* ============================
@@ -328,6 +328,65 @@ Bad Credit
 .link-list-wrap img {
   width: 15%;
   display: none;
+}
+
+/* ============================
+Credit Meter
+=============================== */
+
+#credit-meter-wrap {
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.quote {
+  position: relative;
+  padding: min(1.2vw, 20px);
+  font-size: min(1.2vw, 20px);
+  width: min(20vw, 300px);
+  text-align: center;
+  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-style: italic;
+  border-radius: 20px;
+  background: white;
+  color: black;
+}
+#left-quote:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 75%;
+  width: 0;
+  height: 0;
+  border: 2.5vw solid transparent;
+  border-top-color: #ffffff;
+  border-bottom: 0;
+  border-left: 0;
+  margin-left: -5px;
+  margin-bottom: -2.3vw;
+}
+#right-quote:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 17%;
+  width: 0;
+  height: 0;
+  border: 3.1vw solid transparent;
+  border-top-color: #ffffff;
+  border-bottom: 0;
+  border-right: 0;
+  margin-left: -5px;
+  margin-bottom: -2.4vw;
+}
+.speaker-img {
+  width: 250px;
+  margin: 30px auto;
+  display: block;
+}
+#credit-meter-img {
+  width: 50%;
 }
 
 /* ============================================================
