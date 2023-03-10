@@ -120,6 +120,23 @@ a {
     font-weight: 700;
   }
 }
+.blink-alt {
+  animation: blink-alt 2s infinite;
+}
+@keyframes blink-alt {
+  0% {
+    background: #e40e7f;
+  }
+  25% {
+    background: #c8ff00;
+  }
+  50% {
+    background: #e40e7f;
+  }
+  75% {
+    background: #c8ff00;
+  }
+}
 
 /* ============================
 SupraNav
@@ -335,22 +352,27 @@ Credit Meter
 =============================== */
 
 #credit-meter-wrap {
-  justify-content: space-around;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: end;
+  position: relative;
+}
+.quote-wrap {
+  width: min(20vw, 340px);
 }
 .quote {
   position: relative;
-  padding: min(1.2vw, 20px);
+  padding: min(1.2vw, 30px);
   font-size: min(1.2vw, 20px);
-  width: min(20vw, 300px);
+  width: 100%;
   text-align: center;
-  line-height: 1.5;
+  line-height: 1.3;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-style: italic;
   border-radius: 20px;
   background: white;
   color: black;
+  box-sizing: border-box;
 }
 #left-quote:after {
   content: "";
@@ -381,12 +403,12 @@ Credit Meter
   margin-bottom: -2.4vw;
 }
 .speaker-img {
-  width: 250px;
+  width: 75%;
   margin: 30px auto;
   display: block;
 }
 #credit-meter-img {
-  width: 50%;
+  width: 45%;
 }
 
 /* ============================================================
