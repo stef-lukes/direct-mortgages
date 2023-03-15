@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 /* ============================
 Global Styles
 =============================== */
@@ -13,6 +15,14 @@ Global Styles
 
 /* Fonts */
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Inter", sans-serif !important;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -22,6 +32,12 @@ Global Styles
 }
 .txt-center {
   text-align: center;
+}
+.left-column p {
+  margin: 20px 0;
+  line-height: 1.3;
+  text-align: justify;
+  font-size: 15pxvw;
 }
 
 /* Lists */
@@ -92,6 +108,18 @@ a {
 .no-display {
   display: none;
 }
+.left-column {
+  width: 60%;
+  padding: min(3vw, 50px);
+  box-sizing: border-box;
+  border-radius: 30px;
+}
+.right-column {
+  width: 25%;
+  outline: white solid 10px;
+  border-radius: 30px;
+  position: relative;
+}
 
 /* Animations */
 
@@ -128,13 +156,13 @@ a {
     background: #e40e7f;
   }
   25% {
-    background: #c8ff00;
+    background: #ffffff;
   }
   50% {
     background: #e40e7f;
   }
   75% {
-    background: #c8ff00;
+    background: #ffffff;
   }
 }
 
@@ -170,6 +198,7 @@ SupraNav
 }
 .mail-link {
   font-size: min(1.8vw, 28px);
+  text-transform: lowercase;
 }
 
 /* ============================
@@ -334,11 +363,11 @@ img.check {
 Bad Credit
 =============================== */
 #bad-credit h2 {
-  font-size: min(80px, 5.7vw);
+  font-size: min(73px, 5.25vw);
 }
 #bad-credit h3 {
   margin-top: 5px;
-  font-size: min(3vw, 42px);
+  font-size: min(2.7vw, 39px);
   letter-spacing: 2px;
 }
 
@@ -411,11 +440,141 @@ Credit Meter
   width: 45%;
 }
 
+/* ============================
+SpecialistsIn Our Field
+=============================== */
+
+/* Left Panel */
+#specialists {
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+#logo {
+  width: 60%;
+}
+#specialists-left h2 {
+  font-size: 3.4vw;
+  margin-top: max(1vw, 20px);
+}
+#specialists-left h3 {
+  margin-top: min(20px, 1.5vw);
+  font-size: 1.6vw;
+}
+#specialists-number {
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 20px 0;
+  margin-top: 2vw;
+}
+#specialists-number h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 900;
+}
+#specialists-number a {
+  margin-left: 10px;
+}
+
+/* Right Panel */
+
+#refused {
+  padding: 1.5vw 0;
+  box-sizing: border-box;
+}
+#refused h2 {
+  font-size: 2.1vw;
+  font-weight: 900;
+}
+#refused h2 span {
+  font-size: 4.5vw;
+  font-weight: 900;
+}
+#call-us {
+  padding: 1vw 0;
+}
+#call-us h3 {
+  font-size: 4.5vw;
+  font-weight: 900;
+  line-height: 1;
+}
+#call-us h4 {
+  font-weight: 900;
+  font-size: 2vw;
+}
+#if-we-cant {
+  padding: 2vw 0;
+}
+#if-we-cant h2 {
+  font-size: 3.1vw;
+  font-weight: 900;
+  line-height: 1;
+}
+#funding {
+  font-size: 4.5vw;
+}
+#nobody {
+  font-size: 2.9vw;
+}
+#free {
+  padding: 1vw 0;
+}
+#free h4 {
+  font-size: 2vw;
+}
+#lines-open {
+  margin: 2vw 0;
+}
+#lines-open h5 {
+  color: white;
+  font-size: 2vw;
+}
+#lines-open a.number {
+  font-size: 2.9vw;
+}
+#lines-open a.mail-link {
+  font-size: 1.45vw;
+}
+.right-column img {
+  display: none;
+  margin: auto;
+}
+
 /* ============================================================
 Media Queries
 ============================================================= */
 
 /* Nav */
+@media (max-width: 1700px) {
+  .right-column img {
+    display: block;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+  }
+}
+
+@media (max-width: 1600px) {
+  .right-column img {
+    width: 62%;
+    left: 20%;
+  }
+}
+@media (max-width: 1400px) {
+  .right-column img {
+    width: 85%;
+    left: 12%;
+  }
+}
+@media (max-width: 1315px) {
+  .right-column img {
+    width: 100%;
+    left: 6%;
+  }
+}
+
 @media (max-width: 1280px) {
   .main-nav-link {
     font-size: 15px;
