@@ -448,6 +448,7 @@ SpecialistsIn Our Field
 #specialists {
   justify-content: space-evenly;
   align-items: stretch;
+  padding: 75px 0;
 }
 #logo {
   width: 60%;
@@ -541,6 +542,66 @@ SpecialistsIn Our Field
   margin: auto;
 }
 
+/* ============================
+Mortgages
+=============================== */
+
+#mortgages {
+  border: solid #1b1b1b 50px;
+}
+
+/* Left Panel Calculator */
+
+#calculator-wrap {
+  border: solid #1b1b1b 10px;
+  border-radius: 20px;
+  padding: 60px;
+  width: 700px;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+input[type="text"] {
+  width: 200px;
+  height: 30px;
+  font-size: 18px;
+  text-align: center;
+}
+
+input[type="range"] {
+  width: 80%;
+}
+
+output {
+  display: inline-block;
+  width: 90px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  background: #e40e7f;
+  padding: 10px 5px;
+  color: white;
+  border-radius: 10px;
+  margin-left: 30px;
+}
+
+button {
+  width: 200px;
+  height: 40px;
+  font-size: 18px;
+  background-color: #e40e7f;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+#result {
+  font-size: 22px;
+  font-weight: bold;
+}
 /* ============================================================
 Media Queries
 ============================================================= */

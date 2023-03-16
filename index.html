@@ -388,7 +388,7 @@
       </div>
     </section>
 
-    <!-- Credit Meter 
+    <!-- Specialists
 ------------------------------------------- -->
     <section class="bg-dark flex" id="specialists">
       <!-- Left Column ----------------------------->
@@ -491,5 +491,62 @@
         <img src="assets/agent-2.png" alt="" />
       </div>
     </section>
+
+    <!-- Mortgages
+------------------------------------------- -->
+    <section id="mortgages" class="bg-white flex panel">
+      <div class="left-panel" id="calculator-wrap">
+        <h1>Mortgage Calculator</h1>
+        <form>
+          <label for="propertyValue">Property Value:</label>
+          <input
+            type="number"
+            id="propertyValue"
+            name="propertyValue"
+            value="200000"
+          />
+          <br /><br />
+          <label for="availableDeposit">Available Deposit:</label>
+          <input
+            type="range"
+            id="availableDeposit"
+            name="availableDeposit"
+            min="5"
+            max="80"
+            step="1"
+            value="10"
+          />
+          <output id="availableDepositOutput">£20,000</output>
+          <br /><br />
+          <label for="interestRate">Interest Rate:</label>
+          <input
+            type="range"
+            id="interestRate"
+            name="interestRate"
+            min="0"
+            max="20"
+            step="0.1"
+            value="5"
+          />
+          <output id="interestRateOutput">5%</output>
+          <br /><br />
+          <label for="loanTerm">Loan Term (in years):</label>
+          <input
+            type="range"
+            id="loanTerm"
+            name="loanTerm"
+            min="5"
+            max="50"
+            step="1"
+            value="20"
+          />
+          <output id="loanTermOutput">20 years</output>
+          <br /><br />
+        </form>
+        <br /><br />
+        <p id="result">Your monthly mortgage payment is: £1319.85</p>
+      </div>
+    </section>
+    <script src="script.js"></script>
   </body>
 </html>
