@@ -372,7 +372,7 @@
           <img
             src="assets/worried.png"
             alt=""
-            class="speaker-img animate__animated animate__headShake animate__infinite"
+            class="speaker-img"
           />
         </div>
         <img src="assets/credit-rating.svg" alt="" id="credit-meter-img" />
@@ -381,7 +381,7 @@
             class="quote bg-fuschia txt-white animate__animated animate__pulse animate__infinite"
             id="right-quote"
           >
-            <p>Yes it IS possible. We can get you a mortage!</p>
+            <p>Yes it IS possible. We can get you a mortgage!</p>
           </div>
           <img src="assets/agent.png" alt="" class="speaker-img" />
         </div>
@@ -497,6 +497,7 @@
     <section id="mortgages" class="bg-white flex panel">
       <div class="left-panel" id="calculator-wrap">
         <h1>Mortgage Calculator</h1>
+
         <form>
           <label for="propertyValue">Property Value:</label>
           <input
@@ -516,7 +517,7 @@
             step="1"
             value="10"
           />
-          <output id="availableDepositOutput">£20,000</output>
+          <output id="depositAmountOutput">£20,000</output>
           <br /><br />
           <label for="interestRate">Interest Rate:</label>
           <input
@@ -542,9 +543,25 @@
           />
           <output id="loanTermOutput">20 years</output>
           <br /><br />
+          <input
+            type="radio"
+            id="capitalRepayment"
+            name="mortgageType"
+            value="capitalRepayment"
+            checked
+          />
+          <label for="capitalRepayment">Capital Repayment</label>
+          <input
+            type="radio"
+            id="interestOnly"
+            name="mortgageType"
+            value="interestOnly"
+          />
+          <label for="interestOnly">Interest Only</label>
         </form>
         <br /><br />
         <p id="result">Your monthly mortgage payment is: £1319.85</p>
+        <p id="totalInterestPayable">Total Interest Payable: £105100.88</p>
       </div>
     </section>
     <script src="script.js"></script>
