@@ -37,7 +37,7 @@ h5 {
   margin: 20px 0;
   line-height: 1.3;
   text-align: justify;
-  font-size: 15pxvw;
+  /* font-size: 15px; */
 }
 
 /* Lists */
@@ -109,15 +109,15 @@ a {
   display: none;
 }
 .left-column {
-  width: 60%;
+  width: 65%;
   padding: min(3vw, 50px);
   box-sizing: border-box;
   border-radius: 30px;
 }
 .right-column {
-  width: 25%;
+  width: 26%;
   outline: white solid 10px;
-  border-radius: 30px;
+  border-radius: 1.5vw;
   position: relative;
 }
 
@@ -182,8 +182,6 @@ SupraNav
   padding: max(10px, 1vw);
   width: min(52%, 785px);
   justify-content: space-around;
-}
-.tagline {
 }
 .tagline h3 {
   font-size: min(3.8vw, 62px);
@@ -448,7 +446,8 @@ SpecialistsIn Our Field
 #specialists {
   justify-content: space-evenly;
   align-items: stretch;
-  padding: 75px 0;
+  /* padding: 75px 0; */
+  border: solid #1b1b1b 50px;
 }
 #logo {
   width: 60%;
@@ -548,20 +547,118 @@ Mortgages
 
 #mortgages {
   border: solid #1b1b1b 50px;
+  justify-content: space-evenly;
+  align-items: stretch;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 50px 0;
+}
+
+/* Left Panel Made Simple */
+
+#mortgage-left-wrap {
+  padding: 0 !important;
+  box-sizing: initial;
+}
+
+#made-simple {
+  color: white;
+  padding: min(3vw, 50px);
+  border-radius: 30px;
+}
+#made-simple .title {
+  width: fit-content;
+  display: inline-block;
+}
+#made-simple .title h2 {
+  font-size: min(4.5vw, 61px);
+}
+#made-simple .title h3 {
+  font-size: min(3vw, 40px);
+  letter-spacing: 4px;
+}
+#mortgages-subheading {
+  width: 100% !important;
+  font-size: min(2.5vw, 31px);
+  text-align: left;
+}
+#made-simple .link-list {
+  width: 40%;
 }
 
 /* Left Panel Calculator */
 
 #calculator-wrap {
-  border: solid #1b1b1b 10px;
-  border-radius: 20px;
-  padding: 60px;
-  width: 700px;
+  /* border: solid #1b1b1b 10px; */
+  border-radius: 30px;
+  padding: min(3vw, 60px);
+  width: 100%;
+  margin-top: min(2.5vw,50px);
+  box-sizing: border-box;
+  background: #494949;
 }
 
-label {
+#calculator-wrap form {
+  background: #f1f1f1;
+  padding: min(2.5vw, 50px);
+  box-sizing: border-box;
+  border-radius: 20px;
+  margin-top: min(2vw, 50px);
+}
+#calculator-wrap h1 {
+  font-size: min(3.25vw, 50px);
+}
+
+#calculator-wrap label {
   display: block;
   margin: 10px 0;
+  font-size: min(20px, 1.3vw);
+  font-weight: 900;
+}
+
+label#prop-value {
+  float: left;
+  margin-right: 30px;
+}
+#propertyValue {
+  font-size: 20px;
+  padding: 10px;
+}
+#mortgage-type {
+  display: flex;
+  padding: min(1vw, 20px);
+  border-radius: 20px;
+  margin-top: min(1.5vw, 30px);
+  border: grey solid;
+  width: fit-content;
+}
+#mortgage-type label {
+  margin-right: 1vw;
+}
+.radio-button {
+  display: flex;
+  align-items: center;
+  /* float: left; */
+  margin-right: 50px;
+}
+.radio-button label {
+  font-weight: 400 !important;
+}
+
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #d5d5d5;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  margin-right: 20px;
+}
+
+input[type="radio"]:checked {
+  background-color: #e40e7f;
 }
 
 input[type="text"] {
@@ -572,15 +669,69 @@ input[type="text"] {
 }
 
 input[type="range"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* display: block; */
   width: 80%;
+  height: 8px;
+  background-color: #d5d5d5;
+  border-radius: 8px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  height: 8px;
+}
+input[type="range"]::-moz-track {
+  -moz-appearance: none;
+  height: 8px;
+}
+input[type="range"]::-ms-track {
+  appearance: none;
+  height: 8px;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  background-color: #e40e7f;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -6px;
+  border: none;
+}
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  background-color: #e40e7f;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -6px;
+  border: none;
+}
+input[type="range"]::-ms-thumb {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  background-color: #e40e7f;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -6px;
+  border: none;
+}
+input[type="range"]:active::-webkit-slider-thumb {
+  background-color: #ffffff;
+  border: 3px solid #e40e7f;
 }
 
 output {
   display: inline-block;
-  width: 90px;
+  width: min(6vw, 130px);
   text-align: center;
   font-weight: bold;
-  font-size: 16px;
+  font-size: min(1.2vw, 20px);
   background: #e40e7f;
   padding: 10px 5px;
   color: white;
@@ -598,10 +749,132 @@ button {
   color: white;
 }
 
-#result {
-  font-size: 22px;
-  font-weight: bold;
+.result {
+  font-size: min(1.5vw, 31px);
+  /* font-weight: bold; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+.result span {
+  background: #e40e7f;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+/* Right Column Submit Enquiry */
+
+#submit-enquiry .submit-title {
+  background: #6d6d6d;
+  color: white;
+  padding: 0.5vw;
+  width: 70%;
+  margin: auto;
+  border-radius: 1vw;
+  border: 8px solid white;
+  position: relative;
+  z-index: 5;
+  top: -1.75vw;
+  font-size: 2vw;
+}
+
+.free-rep h5 {
+  font-size: 2.5vw;
+  line-height: 1;
+  font-weight: 900;
+}
+.free-rep h5 span {
+  padding-bottom: 5px;
+  border-bottom: #e40e7f 8px solid;
+  width: fit-content;
+  margin: auto;
+  display: inline-block;
+  font-weight: 900;
+}
+.free-rep h2 {
+  font-size: 3.5vw;
+}
+.free-rep h4 {
+  font-size: 3vw;
+  background: #e40e7f;
+  width: fit-content;
+  display: block;
+  margin: 0 auto 10px auto;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.fast-track {
+  background: #e40e7f;
+  width: 80%;
+  margin: 40px auto 20px auto;
+  padding: min(1vw,20px);
+  border-radius: 1vw;
+}
+.fast-track h5 {
+  font-size: 1.7vw;
+}
+.fast-track h6 {
+  font-size: 1.8vw;
+}
+.fast-track h2 {
+  font-size: 2.8vw;
+  background: #1b1b1b;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+.fast-flex {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  align-items: center;
+}
+.fast-flex .box {
+  background: #1b1b1b;
+  padding: 0.25vw 0.5vw;
+  border-radius: 5px;
+  line-height: 1;
+}
+.fast-flex .box h2 {
+  font-size: 2.75vw;
+}
+.fast-flex .box h6 {
+  font-size: 1.2vw;
+}
+.fast-flex .box h6 span {
+  font-size: 0.9vw;
+}
+.fast-flex .response h5 {
+  font-size: 1.5vw;
+  line-height: 1;
+}
+.fast-flex .response h5 .one {
+  font-size: 1.6vw;
+}
+.fast-flex .response h5 .two {
+  font-size: 1.6vw;
+  letter-spacing: 0.25vw;
+}
+#contact {
+  text-align: left;
+  width: 85%;
+  margin: auto;
+  display: inline-block;
+}
+#contact label {
+  padding: 10px 0;
+}
+#contact input {
+  width: 100%;
+  margin: 10px 0 20px 0;
+  height: 40px;
+}
+#contact textarea {
+  width: 100%;
+  height: 200px;
+}
+
 /* ============================================================
 Media Queries
 ============================================================= */

@@ -15,7 +15,7 @@
   <body>
     <!-- SupraNav 
 ------------------------------------------- -->
-    <section class="supra-nav flex-between">
+    <header class="supra-nav flex-between">
       <img src="assets/dm-logo-light.svg" alt="" class="main-logo" />
       <div class="contact-info bg-dark rounded flex txt-center txt-900">
         <div class="tagline txt-white uppercase">
@@ -33,7 +33,7 @@
           >
         </div>
       </div>
-    </section>
+    </header>
 
     <!-- Navbar 
 ------------------------------------------- -->
@@ -268,9 +268,9 @@
 
     <!-- Bad Credit 
 ------------------------------------------- -->
-    <section id="bad-credit" class="panel bg-dark txt-white">
+    <article id="bad-credit" class="panel bg-dark txt-white">
       <!-- Heading -->
-      <div class="panel-heading flex">
+      <header class="panel-heading flex">
         <div class="title">
           <h2 class="uppercase txt-900">Bad Credit</h2>
           <div class="h-underline"></div>
@@ -281,10 +281,10 @@
           sourcing the very best mortgage solutions regardless of adverse credit
           history.
         </p>
-      </div>
+      </header>
       <div class="p-underline"></div>
       <!-- Link Wrap ----------------------------->
-      <div class="link-list-wrap flex">
+      <section class="link-list-wrap flex">
         <img src="assets/bad-credit.svg" alt="" />
         <!-- Link List -------------------------->
         <ul class="link-list">
@@ -355,13 +355,13 @@
             <a href="#" class="uppercase txt-900">Zero Hour Contracts</a>
           </li>
         </ul>
-      </div>
-    </section>
+      </section>
+    </article>
 
     <!-- Credit Meter 
 ------------------------------------------- -->
-    <section class="panel bg-dark" id="credit-meter">
-      <div id="credit-meter-wrap" class="flex">
+    <article class="panel bg-dark" id="credit-meter">
+      <section id="credit-meter-wrap" class="flex">
         <div class="quote-wrap">
           <div
             class="quote bg-fuschia txt-white animate__animated animate__pulse animate__infinite"
@@ -369,11 +369,7 @@
           >
             <p>Can I still get a mortgage with bad credit?</p>
           </div>
-          <img
-            src="assets/worried.png"
-            alt=""
-            class="speaker-img"
-          />
+          <img src="assets/worried.png" alt="" class="speaker-img" />
         </div>
         <img src="assets/credit-rating.svg" alt="" id="credit-meter-img" />
         <div class="quote-wrap">
@@ -385,14 +381,14 @@
           </div>
           <img src="assets/agent.png" alt="" class="speaker-img" />
         </div>
-      </div>
-    </section>
+      </section>
+    </article>
 
     <!-- Specialists
 ------------------------------------------- -->
-    <section class="bg-dark flex" id="specialists">
+    <article class="bg-dark flex" id="specialists">
       <!-- Left Column ----------------------------->
-      <div class="left-column bg-white" id="specialists-left">
+      <section class="left-column bg-white" id="specialists-left">
         <img src="assets/dm-logo-light.svg" alt="" id="logo" />
         <h2 class="txt-900">Specialists In Our Field</h2>
         <h3>
@@ -454,9 +450,9 @@
             >
           </h4>
         </div>
-      </div>
+      </section>
       <!-- Right Column ---------------------->
-      <div class="right-column uppercase txt-900 txt-center">
+      <aside class="right-column uppercase txt-900 txt-center">
         <div class="bg-dark" id="refused">
           <h2 class="txt-white">
             <span class="txt-fuschia">Refused</span><br />
@@ -489,81 +485,236 @@
           >
         </div>
         <img src="assets/agent-2.png" alt="" />
-      </div>
-    </section>
+      </aside>
+    </article>
 
     <!-- Mortgages
 ------------------------------------------- -->
-    <section id="mortgages" class="bg-white flex panel">
-      <div class="left-panel" id="calculator-wrap">
-        <h1>Mortgage Calculator</h1>
+    <article id="mortgages" class="bg-white flex">
+      <section class="left-panel left-column" id="mortgage-left-wrap">
+        <div class="bg-dark" id="made-simple">
+          <!-- Panel Title Heading----------------------- -->
+          <header class="title">
+            <h2 class="uppercase txt-900">Mortgages</h2>
+            <div class="h-underline"></div>
+            <h3 class="uppercase txt-900">Made Simple</h3>
+          </header>
+          <p class="subheading" id="mortgages-subheading">
+            Experts in delivering flexible and tailored finance solutions
+          </p>
+          <div class="link-list-wrap flex">
+            <img src="assets/bad-credit.svg" alt="" />
+            <!-- Link List -------------------------->
+            <ul class="link-list">
+              <li class="flex">
+                <img src="assets/check.svg" alt="" class="check" />
+                <a href="#" class="uppercase txt-900">Low Income</a>
+              </li>
+              <li class="flex">
+                <img src="assets/check.svg" alt="" class="check" />
+                <a href="#" class="uppercase txt-900">No Proof Of Income</a>
+              </li>
+              <li class="flex">
+                <img src="assets/check.svg" alt="" class="check" />
+                <a href="#" class="uppercase txt-900">No credit History</a>
+              </li>
+              <li class="flex">
+                <img src="assets/check.svg" alt="" class="check" />
+                <a href="#" class="uppercase txt-900">Low Credit Score</a>
+              </li>
+            </ul>
+            <!-- Link List ------------------------>
+            <ul class="link-list">
+              <li class="flex">
+                <img src="assets/check.svg" alt="" class="check" />
+                <a href="#" class="uppercase txt-900">IVA's</a>
+              </li>
+              <li class="flex">
+                <img src="assets/check.svg" alt="" class="check" />
+                <a href="#" class="uppercase txt-900">CCJ's</a>
+              </li>
+              <li class="flex">
+                <img src="assets/check.svg" alt="" class="check" />
+                <a href="#" class="uppercase txt-900">Bankruptcy</a>
+              </li>
+              <li class="flex">
+                <img src="assets/check.svg" alt="" class="check" />
+                <a href="#" class="uppercase txt-900">Defaults</a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-        <form>
-          <label for="propertyValue">Property Value:</label>
-          <input
-            type="number"
-            id="propertyValue"
-            name="propertyValue"
-            value="200000"
-          />
+        <!-- Mortgage Calculator---------------- -->
+        <div id="calculator-wrap">
+          <h1 class="txt-white txt-900 uppercase">Mortgage Calculator</h1>
+          <div class="h-underline"></div>
+          <form>
+            <label for="propertyValue" id="prop-value">Property Value:</label>
+            <input
+              type="number"
+              id="propertyValue"
+              name="propertyValue"
+              value="200000"
+            />
+            <br /><br />
+            <label for="availableDeposit">Available Deposit:</label>
+            <input
+              type="range"
+              id="availableDeposit"
+              name="availableDeposit"
+              class="slider"
+              min="5"
+              max="80"
+              step="1"
+              value="10"
+            />
+            <output id="depositAmountOutput">£20,000</output>
+            <br /><br />
+            <label for="interestRate">Interest Rate:</label>
+            <input
+              type="range"
+              id="interestRate"
+              name="interestRate"
+              class="slider"
+              min="0"
+              max="20"
+              step="0.1"
+              value="5"
+            />
+            <output id="interestRateOutput">5%</output>
+            <br /><br />
+            <label for="loanTerm">Loan Term (in years):</label>
+            <input
+              type="range"
+              id="loanTerm"
+              name="loanTerm"
+              class="slider"
+              min="5"
+              max="50"
+              step="1"
+              value="20"
+            />
+            <output id="loanTermOutput">20 years</output>
+            <br /><br />
+
+            <div id="mortgage-type">
+              <label>Mortgage Type:</label>
+              <div class="radio-button">
+                <input
+                  type="radio"
+                  id="capitalRepayment"
+                  name="mortgageType"
+                  value="capitalRepayment"
+                  checked
+                />
+                <label for="capitalRepayment">Capital Repayment</label>
+              </div>
+              <div class="radio-button">
+                <input
+                  type="radio"
+                  id="interestOnly"
+                  name="mortgageType"
+                  value="interestOnly"
+                />
+                <label for="interestOnly">Interest Only</label>
+              </div>
+            </div>
+          </form>
           <br /><br />
-          <label for="availableDeposit">Available Deposit:</label>
-          <input
-            type="range"
-            id="availableDeposit"
-            name="availableDeposit"
-            min="5"
-            max="80"
-            step="1"
-            value="10"
-          />
-          <output id="depositAmountOutput">£20,000</output>
-          <br /><br />
-          <label for="interestRate">Interest Rate:</label>
-          <input
-            type="range"
-            id="interestRate"
-            name="interestRate"
-            min="0"
-            max="20"
-            step="0.1"
-            value="5"
-          />
-          <output id="interestRateOutput">5%</output>
-          <br /><br />
-          <label for="loanTerm">Loan Term (in years):</label>
-          <input
-            type="range"
-            id="loanTerm"
-            name="loanTerm"
-            min="5"
-            max="50"
-            step="1"
-            value="20"
-          />
-          <output id="loanTermOutput">20 years</output>
-          <br /><br />
-          <input
-            type="radio"
-            id="capitalRepayment"
-            name="mortgageType"
-            value="capitalRepayment"
-            checked
-          />
-          <label for="capitalRepayment">Capital Repayment</label>
-          <input
-            type="radio"
-            id="interestOnly"
-            name="mortgageType"
-            value="interestOnly"
-          />
-          <label for="interestOnly">Interest Only</label>
-        </form>
-        <br /><br />
-        <p id="result">Your monthly mortgage payment is: £1319.85</p>
-        <p id="totalInterestPayable">Total Interest Payable: £105100.88</p>
-      </div>
-    </section>
+          <p class="result txt-white txt-900">
+            Your monthly mortgage payment is: <span id="result">£1319.85</span>
+          </p>
+          <p class="result txt-white txt-900">
+            Total Interest Payable:
+            <span id="totalInterestPayable">£105100.88</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Right Column--------------------------- -->
+
+      <aside
+        class="right-column bg-dark txt-white txt-center txt-900 uppercase"
+        id="submit-enquiry"
+      >
+        <div class="submit-title">
+          <h5 class="txt-900">Submit Enquiry</h5>
+        </div>
+        <div class="submit-box">
+          <div class="free-rep">
+            <h5 class="txt-900">Receive</h5>
+            <h2 class="txt-900">Immediate</h2>
+            <h4 class="shadow-black txt-900">Free</h4>
+            <h5 class="txt-900">No Obligation</h5>
+            <h5><span class="txt-900">Consultation</span></h5>
+          </div>
+
+          <!-- -------------------------------------------- -->
+
+          <div class="fast-track">
+            <h5 class="txt-900">Complete & Submit</h5>
+            <h6 class="txt-900">Using Our</h6>
+            <h2>Fast Track</h2>
+            <div class="fast-flex">
+              <div class="box">
+                <h2 class="txt900">10</h2>
+                <h6 class="txt900">
+                  Minute<br /><span class="txt900">Response</span>
+                </h6>
+              </div>
+              <div class="response">
+                <h5 class="txt-900">
+                  10 Minute<br /><span class="one txt-900">Response</span
+                  ><br /><span class="two txt-900">Service</span>
+                </h5>
+              </div>
+              <div class="box">
+                <h2 class="txt-900">10</h2>
+                <h6 class="txt-900">
+                  Minute<br /><span class="txt-900">Response</span>
+                </h6>
+              </div>
+            </div>
+          </div>
+
+          <!-- -------------------------------------------- -->
+
+          <div class="form">
+            <form id="contact" method="post" action="mail.php">
+              <label for="fname">First name:</label><br />
+              <input type="text" id="fname" name="fname" required /><br />
+              <label for="lname">Surname:</label><br />
+              <input type="text" id="lname" name="lname" required /><br />
+              <label for="mob">Mobile No:</label><br />
+              <input type="text" id="mob" name="mob" required /><br />
+              <label for="laline">Landline No:</label><br />
+              <input type="text" id="laline" name="laline" /><br />
+              <label for="email">Email:</label><br />
+              <input type="text" id="email" name="email" required /><br />
+              <label for="doe">Date of Eviction:</label><br />
+              <input type="text" id="doe" name="doe" /><br />
+              <label for="message">Additional Information:</label><br />
+              <textarea id="message" name="message"></textarea><br />
+              <div
+                id="sidebar-captcha"
+                class="g-recaptcha"
+                data-sitekey="6LehozMaAAAAAPy65zF6kAVw3YmDPNi6kV-FT5tu"
+              ></div>
+              <button
+                name="submit"
+                type="submit"
+                id="contact-submit-one"
+                data-submit="...Sending"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </aside>
+    </article>
     <script src="script.js"></script>
+    <script src="slider-script.js"></script>
   </body>
 </html>

@@ -17,7 +17,7 @@ const initialDepositAmount =
   propertyValue.value * (availableDeposit.value / 100);
 document.getElementById(
   "depositAmountOutput"
-).textContent = `£${initialDepositAmount.toFixed(2)}`;
+).textContent = `£${initialDepositAmount.toFixed(0)}`;
 
 // Function to calculate the mortgage payment and total interest payable
 function calculateMortgagePayment() {
@@ -41,12 +41,8 @@ function calculateMortgagePayment() {
     totalInterest = principle * (interestRate.value / 100) * loanTerm.value;
   }
 
-  mortgagePaymentOutput.textContent = `Your monthly mortgage payment is: £${payment.toFixed(
-    2
-  )}`;
-  totalInterestOutput.textContent = `Total Interest Payable: £${totalInterest.toFixed(
-    2
-  )}`;
+  mortgagePaymentOutput.textContent = ` £${payment.toFixed(0)}`;
+  totalInterestOutput.textContent = ` £${totalInterest.toFixed(0)}`;
 }
 
 // Add event listener for the mortgage type radio buttons
@@ -65,7 +61,7 @@ propertyValue.addEventListener("input", function () {
   const depositAmount = propertyValue.value * (availableDeposit.value / 100);
   document.getElementById(
     "depositAmountOutput"
-  ).textContent = `£${depositAmount.toFixed(2)}`;
+  ).textContent = `£${depositAmount.toFixed(0)}`;
 
   // Update the mortgage payment output value and total interest payable based on the new property value
   calculateMortgagePayment();
@@ -78,7 +74,7 @@ document.querySelectorAll("input[type='range']").forEach(function (slider) {
     const depositAmount = propertyValue.value * (availableDeposit.value / 100);
     document.getElementById(
       "depositAmountOutput"
-    ).textContent = `£${depositAmount.toFixed(2)}`;
+    ).textContent = `£${depositAmount.toFixed(0)}`;
 
     // Update the mortgage payment output value and total interest payable
     calculateMortgagePayment();
