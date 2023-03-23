@@ -887,10 +887,10 @@ Simply Call & Guarantee Banner
   background-position: right;
 }
 #guarantee h2 {
-  font-size: min(50px,4vw);
+  font-size: min(50px, 4vw);
 }
 #guarantee h3 {
-  font-size: min(5vw,70px);
+  font-size: min(5vw, 70px);
   margin: 3vw 0;
 }
 #guarantee h3 span {
@@ -900,7 +900,7 @@ Simply Call & Guarantee Banner
   font-weight: 900;
 }
 #guarantee p {
-  font-size: min(1.8vw,34px);
+  font-size: min(1.8vw, 34px);
   width: 75%;
   margin: auto;
   line-height: 1.5;
@@ -914,17 +914,81 @@ Simply Call & Guarantee Banner
   padding: 30px;
 }
 #simply-call h3 {
-  font-size: min(2vw,40px) !important;
+  font-size: min(2vw, 40px) !important;
   margin: 0 !important;
 }
 #simply-call h2 {
   font-size: 5.5vw !important;
 }
 #simply-call h5 {
-  font-size: min(2.4vw,30px) !important;
+  font-size: min(2.4vw, 30px) !important;
   width: fit-content;
   margin: auto;
   padding: 0 20px;
+}
+
+/* ============================
+Protection & Insurance
+=============================== */
+
+#protection {
+  border: solid #1b1b1b 50px;
+}
+
+#protection .title {
+  width: fit-content;
+}
+
+#protection .title h2 {
+  font-size: min(70px, 4.25vw);
+}
+
+#protection .title h3 {
+  font-size: min(50px, 3.25vw);
+  letter-spacing: 8px;
+}
+
+#heading {
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+#protection-subheading {
+  font-size: min(3vw, 40px) !important;
+  width: fit-content;
+}
+
+img#signing-form {
+  width: 100%;
+  height: 25vw;
+  object-fit: cover;
+  margin: 3vw 0;
+}
+
+#three-boxes {
+  margin-top: 1vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.box {
+  font-size: 1.5vw;
+  width: 15vw;
+  border: #e40e7f 3px solid;
+  text-align: center;
+  padding: 0.5vw;
+}
+#protection p {
+  font-size: min(1.7vw, 30px);
+}
+
+#protection .link-list-wrap {
+  margin-top: 2vw;
+  justify-content: space-between;
+  width: 100%;
+}
+#protection .link-list a {
+  font-size: min(25px, 1.25vw);
 }
 
 /* ============================================================
@@ -946,6 +1010,9 @@ Media Queries
   .right-column img {
     width: 62%;
     left: 20%;
+  }
+  #protection {
+    border: none;
   }
 }
 @media (max-width: 1400px) {
