@@ -216,6 +216,7 @@ Main Nav
 .main-nav-link {
   font-size: 18px;
   width: max(255px, 20%);
+  transition: all 0.2s ease;
 }
 .main-nav-link a {
   padding: 10px 0;
@@ -234,7 +235,10 @@ Dropdown Nav
   background-color: #1b1b1b;
 }
 .main-nav-link:hover {
-  animation: blink 2s infinite;
+  /* animation: blink 2s infinite; */
+  background: #e40e7f;
+  color: #1b1b1b;
+  font-weight: 700;
 }
 .main-nav-link:hover > .dropdown-menu {
   visibility: visible;
@@ -348,6 +352,7 @@ Panel Styles Global
   align-items: center;
   margin: 10px 0;
 }
+
 img.check {
   width: min(2vw, 30px) !important;
   margin-right: 15px;
@@ -355,13 +360,19 @@ img.check {
 }
 .link-list a {
   font-size: min(1.5vw, 25px);
+  transition: all 0.2s ease-out;
+}
+.link-list li a:hover {
+  /* transform: scale(1.1); */
+  /* transform-origin: left; */
+  color: #e40e7f;
 }
 
 /* ============================
 Bad Credit
 =============================== */
 #bad-credit h2 {
-  font-size: min(73px, 5.25vw);
+  font-size: min(73px, 5.2vw);
 }
 #bad-credit h3 {
   margin-top: 5px;
@@ -1029,6 +1040,125 @@ section#call-free {
 div#number {
   position: relative;
   left: 3vw;
+}
+
+/* ============================
+About Us
+=============================== */
+
+article#about-us {
+  background: #494949;
+  text-align: center;
+}
+
+#about-us .title {
+  width: fit-content;
+  text-align: center;
+  margin: 3vw auto;
+  color: white;
+}
+
+#about-us .title h2 {
+  font-size: min(6vw,90px);
+}
+
+p#one {
+  font-size: min(60px,4vw);
+}
+
+#three-points {
+  margin: 3vw 0;
+}
+
+.point {
+  margin: 2vw auto;
+  width: fit-content;
+}
+
+p#two {
+  font-size: min(2.7vw, 40px);
+  font-style: italic;
+}
+
+p#three {
+  font-size: min(2.5vw,36px);
+  width: 70%;
+  margin: auto;
+  font-weight: 300;
+}
+#about-us .write-up {
+  justify-content: space-evenly;
+  width: min(100%,1330px);
+  margin: 4vw auto;
+}
+
+#about-us .write-up p {
+  text-align: justify;
+  width: 40%;
+  line-height: 1.5;
+  font-size: min(1.3vw,20px);
+  letter-spacing: 1px;
+}
+
+/* ============================
+Contact Us
+=============================== */
+
+#contact-us-wrap .inner {
+  width: min(90%,1430px);
+  margin: 3vw auto;
+}
+
+#contact-us-wrap .inner h4 {
+  text-align: right;
+  font-size: min(3.3vw,60px);
+  letter-spacing: 0.15vw;
+  margin-bottom: 1vw;
+}
+
+div#contact-us-inner-flex {
+  align-items: baseline;
+  border: white 0.75vw solid;
+  border-radius: 1.5vw;
+  position: relative;
+}
+
+#contact-us-inner-flex img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+}
+
+div#contact-info {
+  position: relative;
+  left: 33vw;
+  margin: 2vw 0;
+}
+
+#contact-info h2 {
+  font-size: min(6.1vw,100px);
+  /* letter-spacing: 4px; */
+}
+
+#contact-info .number {
+  font-size: min(5vw,79px);
+  letter-spacing: 0.5vw;
+  padding: 0 0.25vw;
+}
+
+#contact-info .mail-link {
+  font-size: min(2.75vw, 45px);
+  letter-spacing: 0.1vw;
+  padding: 0 0.5vw;
+  margin-top: 1vw;
+}
+
+#contact-us-wrap .inner h5 {
+  text-align: center;
+  margin-top: 1vw;
+  font-size: min(3vw,50px);
+  letter-spacing: 0.1vw;
 }
 
 /* ============================================================
