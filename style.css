@@ -1059,11 +1059,11 @@ article#about-us {
 }
 
 #about-us .title h2 {
-  font-size: min(6vw,90px);
+  font-size: min(6vw, 90px);
 }
 
 p#one {
-  font-size: min(60px,4vw);
+  font-size: min(60px, 4vw);
 }
 
 #three-points {
@@ -1081,14 +1081,14 @@ p#two {
 }
 
 p#three {
-  font-size: min(2.5vw,36px);
+  font-size: min(2.5vw, 36px);
   width: 70%;
   margin: auto;
   font-weight: 300;
 }
 #about-us .write-up {
   justify-content: space-evenly;
-  width: min(100%,1330px);
+  width: min(100%, 1330px);
   margin: 4vw auto;
 }
 
@@ -1096,7 +1096,7 @@ p#three {
   text-align: justify;
   width: 40%;
   line-height: 1.5;
-  font-size: min(1.3vw,20px);
+  font-size: min(1.3vw, 20px);
   letter-spacing: 1px;
 }
 
@@ -1105,13 +1105,13 @@ Contact Us
 =============================== */
 
 #contact-us-wrap .inner {
-  width: min(90%,1430px);
+  width: min(90%, 1430px);
   margin: 3vw auto;
 }
 
 #contact-us-wrap .inner h4 {
   text-align: right;
-  font-size: min(3.3vw,60px);
+  font-size: min(3.3vw, 60px);
   letter-spacing: 0.15vw;
   margin-bottom: 1vw;
 }
@@ -1137,12 +1137,12 @@ div#contact-info {
 }
 
 #contact-info h2 {
-  font-size: min(6.1vw,100px);
+  font-size: min(6.1vw, 100px);
   /* letter-spacing: 4px; */
 }
 
 #contact-info .number {
-  font-size: min(5vw,79px);
+  font-size: min(5vw, 79px);
   letter-spacing: 0.5vw;
   padding: 0 0.25vw;
 }
@@ -1157,8 +1157,44 @@ div#contact-info {
 #contact-us-wrap .inner h5 {
   text-align: center;
   margin-top: 1vw;
-  font-size: min(3vw,50px);
+  font-size: min(3vw, 50px);
   letter-spacing: 0.1vw;
+}
+
+/* ============================
+Footer
+=============================== */
+
+footer.flex.bg-fuschia.panel {
+  justify-content: space-evenly;
+  padding: 7vw 0 !important;
+}
+
+.footer-contact {
+  width: min(25vw, 388px);
+}
+
+.legal {
+  width: 20%;
+  text-align: justify;
+}
+footer h6 {
+  font-size: min(1.4vw, 20px);
+  margin-bottom: 10px;
+}
+
+footer .address {
+  width: 250px;
+}
+
+footer p {
+  font-size: 1.1vw;
+  line-height: 1.3;
+}
+
+footer .sitemap a {
+  font-size: min(1.3vw, 16px);
+  margin-bottom: 5px;
 }
 
 /* ============================================================
