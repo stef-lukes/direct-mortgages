@@ -215,7 +215,7 @@ Main Nav
 }
 .main-nav-link {
   font-size: 18px;
-  width: max(255px, 20%);
+  width: min(255px, 20%);
   transition: all 0.2s ease;
 }
 .main-nav-link a {
@@ -248,7 +248,7 @@ Dropdown Nav
 .dropdown-link-wrap {
   width: 100% !important;
   border-bottom: 1px solid #e40e80;
-  font-size: 15px;
+  font-size: 12px;
 }
 .dropdown-link {
   padding: 10px 0;
@@ -1243,11 +1243,15 @@ Write-Up Pages
 =============================== */
 
 ul.contents {
-  width: 280px;
+  width: 380px;
   /* margin: 50px auto; */
-  /* top: 57vw; */
+  top: 3vw;
   right: 3vw;
-  position: absolute;
+  position: sticky;
+  float: right;
+  background: #e40e7f;
+  padding: 20px 10px;
+  border-radius: 1vw;
 }
 
 .write-up-wrap .title {
@@ -1270,7 +1274,7 @@ ul.contents {
 
 .contents li {
   margin: 5px;
-  color: #e40e7f;
+  color: white;
 }
 
 section.intro {
