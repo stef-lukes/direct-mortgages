@@ -362,6 +362,20 @@ Header
   background-position: top;
   background-size: cover;
 }
+#mortgages-hero-wrap {
+  width: 100%;
+  height: 34vw;
+  background-image: url(assets/handing-over-keys.jpg);
+  background-position: center;
+  background-size: cover;
+}
+#protection-hero-wrap {
+  width: 100%;
+  height: 34vw;
+  background-image: url(assets/protection.jpg);
+  background-position: center;
+  background-size: cover;
+}
 #hero-wrap img {
   display: block;
   margin: auto;
