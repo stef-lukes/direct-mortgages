@@ -258,6 +258,62 @@ Dropdown Nav
 }
 
 /* ============================
+Mobile Nav
+================================ */
+
+#menuBtn {
+  display: none;
+}
+
+.supra-nav .menu-label {
+  display: none;
+  padding: 19px 20px;
+  position: relative;
+  float: right;
+  right: 10px;
+  cursor: pointer;
+}
+.supra-nav .menu-label .label-icon {
+  background: #1b1b1b;
+  display: block;
+  height: 3px;
+  width: 22px;
+  position: relative;
+  transition: all 0.3s ease-out;
+}
+.supra-nav .menu-label .label-icon:before {
+  background: #1b1b1b;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 7px;
+  transition: all 0.3s ease-out;
+}
+.supra-nav .menu-label .label-icon:after {
+  background: #1b1b1b;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -7px;
+  transition: all 0.3s ease-out;
+}
+.supra-nav .menuBtn:checked ~ .menu-label .label-icon {
+  background: transparent;
+}
+.supra-nav .menuBtn:checked ~ .menu-label .label-icon:before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.supra-nav .menuBtn:checked ~ .menu-label .label-icon:after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+/* ============================
 Header
 =============================== */
 
@@ -297,6 +353,13 @@ Header
   height: 34vw;
   background-image: url(assets/header-bg.jpg);
   background-position: center;
+  background-size: cover;
+}
+#bc-hero-wrap {
+  width: 100%;
+  height: 34vw;
+  background-image: url(assets/mortgage-application.jpg);
+  background-position: top;
   background-size: cover;
 }
 #hero-wrap img {
@@ -1162,6 +1225,87 @@ div#contact-info {
 }
 
 /* ============================
+Write-Up Pages
+=============================== */
+
+ul.contents {
+  width: 280px;
+  /* margin: 50px auto; */
+  /* top: 57vw; */
+  right: 3vw;
+  position: absolute;
+}
+
+.write-up-wrap .title {
+  width: fit-content;
+  /* margin: auto; */
+  /* position: relative; */
+  /* right: 14vw; */
+}
+
+.write-up-wrap .title h2 {
+  font-size: min(5vw, 80px);
+}
+
+.contents-heading {
+  font-size: 26px;
+  font-weight: 900;
+  margin-bottom: 20px !important;
+  color: white !important;
+}
+
+.contents li {
+  margin: 5px;
+  color: #e40e7f;
+}
+
+section.intro {
+  margin-bottom: 20px;
+  font-size: 22px;
+  border: none !important;
+  width: 75%;
+  position: relative;
+  /* left: 16vw; */
+  margin-top: 0 !important;
+  background: #1b1b1b !important;
+  color: white !important;
+  padding: 30px 0 !important;
+}
+
+.intro p {
+  font-size: min(1.6vw, 26px) !important;
+  line-height: 1.5 !important;
+}
+
+.main-content p {
+  /* margin: 20px; */
+  /* line-height: 1.5; */
+}
+
+.main-content section {
+  padding: 30px 50px;
+  border: white 10px solid;
+  border-radius: 1.5vw;
+  margin: 4vw 0;
+  color: #1b1b1b;
+  background: white;
+  width: 65%;
+}
+
+.main-content section h2 {
+  color: #e40e7f;
+  font-size: min(3vw, 50px);
+  font-weight: 900;
+}
+
+.main-content section p {
+  font-size: min(1.25vw, 18px);
+  line-height: 1.3;
+  text-align: justify;
+  margin: 20px 0;
+}
+
+/* ============================
 Footer
 =============================== */
 
@@ -1237,5 +1381,64 @@ Media Queries
 @media (max-width: 1280px) {
   .main-nav-link {
     font-size: 15px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .supra-nav {
+    margin: 5px;
+  }
+  .supra-nav .menu-label {
+    display: block;
+  }
+  .main-logo {
+    width: 150px;
+    padding-left: 7px;
+  }
+  .contact-info {
+    display: none;
+  }
+  .main-nav-wrap {
+    justify-content: flex-start;
+    padding: 0;
+    background-color: #1b1b1b;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+  }
+  #menuBtn:checked ~ .main-nav-wrap {
+    max-height: 1000px;
+  }
+  .main-nav {
+    display: initial !important;
+    width: 100%;
+  }
+  .main-nav-link {
+    width: 100%;
+    border-left: none !important;
+  }
+  .main-nav-link:hover > .dropdown-menu {
+    pointer-events: initial;
+  }
+  .dropdown-menu {
+    position: initial;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    padding: 0;
+    background-color: #262626;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+  }
+  .main-nav-link label {
+    display: block;
+    padding: 10px 0;
+  }
+  .top-link {
+    display: none;
+  }
+  .main-nav-link input:checked ~ .dropdown-menu {
+    max-height: 1000px;
   }
 }
