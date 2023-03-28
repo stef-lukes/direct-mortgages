@@ -119,6 +119,7 @@ a {
   outline: white solid 10px;
   border-radius: 1.5vw;
   position: relative;
+  padding-bottom: 10px;
 }
 
 /* Animations */
@@ -326,7 +327,7 @@ Header
 }
 #pink-banner-top h1,
 #pink-banner-bottom h1 {
-  font-size: min(36px, 2.5vw);
+  font-size: clamp(17px, 2.5vw, 36px);
   letter-spacing: 2px;
 }
 /* Subnav List */
@@ -398,14 +399,15 @@ Panel Styles Global
 }
 .title {
   /* margin-right: 90px; */
-  width: min(455px, 37%);
+  width: fit-content;
+  width: -moz-fit-content;
 }
 .h-underline {
   height: 5px;
   background: #e40e7f;
 }
 .subheading {
-  font-size: min(1.7vw, 26px);
+  font-size: clamp(16px, 1.7vw, 26px);
   width: 57%;
   line-height: 1.7;
   letter-spacing: 1px;
@@ -415,6 +417,9 @@ Panel Styles Global
   background: #e40e7f;
   width: 91%;
   margin: 6px auto 40px auto;
+}
+.link-list-wrap-two {
+  display: none;
 }
 .link-list-wrap {
   width: min(100%, 1540px);
@@ -431,12 +436,12 @@ Panel Styles Global
 }
 
 img.check {
-  width: min(2vw, 30px) !important;
+  width: clamp(20px, 2vw, 30px) !important;
   margin-right: 15px;
   display: block !important;
 }
 .link-list a {
-  font-size: min(1.5vw, 25px);
+  font-size: clamp(16px, 1.5vw, 25px);
   transition: all 0.2s ease-out;
 }
 .link-list li a:hover {
@@ -449,11 +454,11 @@ img.check {
 Bad Credit
 =============================== */
 #bad-credit h2 {
-  font-size: min(73px, 5.2vw);
+  font-size: clamp(30px, 5.2vw, 73px);
 }
 #bad-credit h3 {
   margin-top: 5px;
-  font-size: min(2.7vw, 39px);
+  font-size: clamp(14px, 2.7vw, 39px);
   letter-spacing: 2px;
 }
 
@@ -532,7 +537,7 @@ SpecialistsIn Our Field
 
 /* Left Panel */
 #specialists {
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: stretch;
   /* padding: 75px 0; */
   border: solid #1b1b1b 50px;
@@ -552,7 +557,7 @@ SpecialistsIn Our Field
   border-radius: 20px;
   box-sizing: border-box;
   padding: 20px 0;
-  margin-top: 2vw;
+  margin-top: max(2vw, 20px);
 }
 #specialists-number h4 {
   display: flex;
@@ -563,6 +568,7 @@ SpecialistsIn Our Field
 }
 #specialists-number a {
   margin-left: 10px;
+  text-transform: lowercase;
 }
 
 /* Right Panel */
@@ -586,10 +592,12 @@ SpecialistsIn Our Field
   font-size: 4.5vw;
   font-weight: 900;
   line-height: 1;
+  color: #1b1b1b;
 }
 #call-us h4 {
   font-weight: 900;
   font-size: 2vw;
+  color: #1b1b1b;
 }
 #if-we-cant {
   padding: 2vw 0;
@@ -607,12 +615,17 @@ SpecialistsIn Our Field
 }
 #free {
   padding: 1vw 0;
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 #free h4 {
   font-size: 2vw;
 }
 #lines-open {
   margin: 2vw 0;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  display: block;
 }
 #lines-open h5 {
   color: white;
@@ -647,6 +660,7 @@ Mortgages
 #mortgage-left-wrap {
   padding: 0 !important;
   box-sizing: initial;
+  align-self: stretch;
 }
 
 #made-simple {
@@ -655,6 +669,7 @@ Mortgages
   border-radius: 30px;
 }
 #made-simple .title {
+  width: -moz-fit-content;
   width: fit-content;
   display: inline-block;
 }
@@ -671,7 +686,7 @@ Mortgages
   text-align: left;
 }
 #made-simple .link-list {
-  width: 40%;
+  width: 45%;
 }
 
 /* Left Panel Calculator */
@@ -925,7 +940,7 @@ button {
   line-height: 1;
 }
 .fast-flex .box h2 {
-  font-size: 2.75vw;
+  font-size: 2.5vw;
 }
 .fast-flex .box h6 {
   font-size: 1.2vw;
@@ -956,11 +971,12 @@ button {
 #contact input {
   width: 100%;
   margin: 10px 0 20px 0;
-  height: 40px;
+  height: 34px;
 }
 #contact textarea {
   width: 100%;
-  height: 200px;
+  height: 180px;
+  margin: 8px auto;
 }
 
 /* ============================
@@ -1243,7 +1259,7 @@ Write-Up Pages
 =============================== */
 
 ul.contents {
-  width: 380px;
+  width: 25%;
   /* margin: 50px auto; */
   top: 3vw;
   right: 3vw;
@@ -1307,7 +1323,7 @@ section.intro {
   margin: 4vw 0;
   color: #1b1b1b;
   background: white;
-  width: 65%;
+  width: 60%;
 }
 
 .main-content section h2 {
@@ -1363,7 +1379,6 @@ footer .sitemap a {
 Media Queries
 ============================================================= */
 
-/* Nav */
 @media (max-width: 1700px) {
   .right-column img {
     display: block;
@@ -1399,6 +1414,98 @@ Media Queries
 @media (max-width: 1280px) {
   .main-nav-link {
     font-size: 15px;
+  }
+  #specialists {
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  #specialists-left {
+    width: 70%;
+  }
+  #specialists-right {
+    width: 29%;
+  }
+  .right-column img {
+    position: initial;
+    margin-bottom: -15px;
+  }
+  input[type="range"] {
+    width: 75%;
+  }
+  output {
+    width: 7vw;
+  }
+  #mortgage-type label {
+    font-size: 15px;
+  }
+  .radio-button {
+    margin-right: 2vw;
+  }
+}
+
+@media (max-width: 1150px) {
+  #bad-credit .link-list-wrap {
+    display: none;
+  }
+  .link-list-wrap-two {
+    display: flex;
+  }
+  .link-list-wrap-two .link-list {
+    width: 50%;
+  }
+  .link-list-wrap-two .link-list a {
+    font-size: max(2vw, 18px);
+  }
+  #credit-meter-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+  #credit-meter-img {
+    order: 3;
+    width: 70vw;
+    margin-top: 5vw;
+  }
+  .quote-wrap {
+    width: min(350px, 35vw);
+  }
+  .quote-wrap p {
+    font-size: 16px;
+  }
+  #quote-wrap-1 {
+    order: 1;
+    position: relative;
+    right: 25vw;
+    bottom: -1vw;
+  }
+  #quote-wrap-2 {
+    order: 2;
+    position: absolute;
+    right: 4vw;
+  }
+  #mortgages {
+    display: block;
+    border: none;
+    padding: 2vw 0;
+    background: #1b1b1b;
+  }
+  #mortgage-left-wrap {
+    width: 95%;
+    margin: auto;
+  }
+  #made-simple .title h2 {
+    font-size: 60px;
+  }
+  #made-simple .title h3 {
+    font-size: 40px;
+    letter-spacing: 4px;
+  }
+  #mortgages-subheading {
+    width: 100% !important;
+    font-size: 30px;
+    text-align: left;
+  }
+  #made-simple .link-list {
+    width: 45%;
   }
 }
 
@@ -1458,5 +1565,201 @@ Media Queries
   }
   .main-nav-link input:checked ~ .dropdown-menu {
     max-height: 1000px;
+  }
+  .dropdown-link-wrap {
+    font-size: 14px;
+  }
+  #sub-nav-list {
+    display: none;
+  }
+  #bad-credit header {
+    display: initial !important;
+  }
+  .panel {
+    padding: 5vw 6vw;
+  }
+  .title {
+    width: fit-content;
+  }
+  .subheading {
+    width: 100%;
+    margin-top: 3vw;
+  }
+  #specialists {
+    flex-direction: column;
+    align-items: center;
+  }
+  #specialists-left {
+    width: 90%;
+  }
+  #specialists-left h2 {
+    font-size: 6vw;
+  }
+  #specialists-left h3 {
+    font-size: max(18px, 3.5vw);
+    line-height: 1.2;
+  }
+  #specialists aside {
+    width: 90% !important;
+    margin-top: 6vw;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    align-items: center;
+  }
+  #specialists aside img {
+    position: initial;
+    width: min(80%, 370px);
+    display: none;
+  }
+  #refused h2 span {
+    font-size: 5.5vw;
+  }
+  #refused h2 {
+    font-size: 3vw;
+  }
+  #call-us h3 {
+    font-size: 5.25vw;
+  }
+  #call-us h4 {
+    font-size: 5vw;
+    line-height: 1;
+  }
+  #if-we-cant h2 {
+    font-size: 3.5vw;
+  }
+  #funding {
+    font-size: 5.5vw;
+  }
+  #nobody {
+    font-size: 3.6vw;
+  }
+  #free h4 {
+    font-size: max(26px, 5vw);
+  }
+  #lines-open h5 {
+    font-size: max(28px, 7vw);
+  }
+  #lines-open a.number {
+    font-size: max(10vw, 40px);
+    line-height: 1;
+  }
+  #lines-open a.mail-link {
+    font-size: max(20px, 5vw);
+  }
+  #specialists-number h4 {
+    font-size: max(3.5vw, 30px);
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 850px) {
+  #hero-wrap {
+    height: 75vw;
+    background-size: 170%;
+  }
+  #hero-wrap img {
+    top: 25%;
+    width: 50%;
+  }
+  #made-simple .title h2 {
+    font-size: 7.5vw;
+  }
+  #made-simple .title h3 {
+    font-size: 5vw;
+    letter-spacing: 4px;
+  }
+  #mortgages-subheading {
+    width: 100% !important;
+    font-size: max(20px, 3.5vw);
+    text-align: left;
+  }
+  #made-simple .link-list {
+    width: 75%;
+  }
+}
+@media (max-width: 750px) {
+  .link-list-wrap-two {
+    display: none;
+  }
+  .link-list-wrap {
+    display: initial !important;
+  }
+  .link-list {
+    width: 100%;
+  }
+  #specialists {
+    border: none;
+    padding-bottom: 30px;
+  }
+  #specialists-left {
+    width: 90%;
+    border-radius: 2.5vw;
+    padding: 5vw 3vw;
+  }
+  #specialists-number a {
+    margin-left: 10px;
+  }
+  #specialists-number a.mail {
+    font-size: max(4vw, 20px);
+    display: block;
+  }
+  #specialists aside {
+    width: 85% !important;
+    box-sizing: border-box;
+  }
+  #refused {
+    padding: 1.5vw;
+  }
+}
+@media (max-width: 600px) {
+  #specialists-number h4 {
+    flex-direction: column;
+  }
+  #specialists-number a {
+    margin: 0;
+  }
+}
+@media (max-width: 500px) {
+  .quote-wrap p {
+    font-size: 12px;
+  }
+  #credit-meter-img {
+    width: 80vw;
+  }
+  #logo {
+    width: 70%;
+  }
+  #specialists-left h2 {
+    font-size: 26px;
+  }
+  #specialists aside {
+    display: initial;
+  }
+  #refused h2 {
+    font-size: 8vw;
+  }
+  #refused h2 span {
+    font-size: 17.5vw;
+  }
+  #call-us h3 {
+    font-size: 16vw;
+  }
+  #call-us h4 {
+    font-size: 8vw;
+  }
+  #if-we-cant h2 {
+    font-size: 11.5vw;
+  }
+  #funding {
+    font-size: 17vw;
+  }
+  #nobody {
+    font-size: 11vw;
+  }
+  #free h4 {
+    font-size: 7vw;
+  }
+  #lines-open {
+    padding: 15px 0;
+    display: block;
   }
 }
